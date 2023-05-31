@@ -2,13 +2,13 @@ package br.unitins.ecommerce.model;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Usuario {
@@ -19,6 +19,8 @@ public class Usuario {
     private String nome;
     private String email;
     private String cpf;
+
+    private String nomeImagem;
 
     @OneToMany
     @JoinTable(name = "usuario_endereco",
@@ -120,5 +122,13 @@ public class Usuario {
 
         this.listaDesejo = listaDesejo;
 
+    }
+
+    public String getNomeImagem() {
+        return nomeImagem;
+    }
+
+    public void setNomeImagem(String nomeImagem) {
+        this.nomeImagem = nomeImagem;
     }
 }

@@ -1,7 +1,6 @@
 package br.unitins.ecommerce.form;
 
 import org.jboss.resteasy.annotations.providers.multipart.PartType;
-
 import jakarta.ws.rs.FormParam;
 
 public class ImageForm {
@@ -28,7 +27,4 @@ public class ImageForm {
     public void setImagem(byte[] imagem) {
         this.imagem = imagem;
     }
-
-
-
 }

@@ -16,11 +16,12 @@ public record UsuarioResponseDTO(
         List<Endereco> enderecos,
         List<Telefone> telefones,
         List<Produto> listaDesejo
+        String nomeImagem;
 ) {
     public UsuarioResponseDTO(Usuario usuario) {
 
         this(usuario.getId(), usuario.getNome(), usuario.getEmail(), usuario.getCpf(), usuario.getEnderecos(),
-                usuario.getTelefones(), usuario.getListaDesejo());
+                usuario.getTelefones(), usuario.getListaDesejo(), usuaeio.getNomeImagem);
 
     }
 }
